@@ -13,11 +13,22 @@ We define the variables by using them without Uppercase.
 - How to type an Array?
 
 For the Arrays, it depends of what we are going to put in it.
-let fruits : string[] = ["Apple", "Pinapple", "Banana"];
+
+```ts
+let fruits: string[] = ["Apple", "Pinapple", "Banana"];
+```
+
 We can declare an array with differents types of Type like the following example :
-==> let values : (string | number) = ["Apple", "Pinapple", 12, 67];
+
+```ts
+let values: string | number = ["Apple", "Pinapple", 12, 67];
+```
+
 or
-==> let fruits : Array<string> = ["Apple", "peach"]
+
+```ts
+let fruits: Array<string> = ["Apple", "peach"];
+```
 
 - What is the `any` type?
 
@@ -27,21 +38,79 @@ When we declare un variable with no specification, Typescript considers like an 
 
 We can specify a result of a function by usinf the two dots and the name of the Type. Just before the first braces.
 
-==> function getFavoriteNumb (a, b) : number{
-return 26;
+```ts
+function getFavoriteNumb(a, b): number {
+  return 26;
 }
+```
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
 ## Level 2
 
 - What is a class?
+
+It is a Group which have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of Element.
+
+```ts
+class MyClass {
+  [s: string]: boolean | ((s: string) => boolean);
+
+  check(s: string) {
+    return this[s] as boolean;
+  }
+}
+```
+
 - What is a class constructor?
+
+A constructor is a special Function, which can be called only once.
+In TS, Constructor class can include Methods, Properties, and Logics Constructors.
+
+```ts
+class Point {
+  x: number;
+  y: number;
+
+  // Normal signature with defaults
+  constructor(x = 0, y = 0) {
+    this.x = x;
+    this.y = y;
+  }
+}
+```
+
 - What is a class instance?
+
+It is an Object. Known as Class Object or Class instance.
+While classes are groups of objects, an instance is a specific object that actually belongs to a class.
+
+```ts
+class Person {}
+const personInstance = new Person();
+```
+
+```ts
+class Person {
+  constructor(name: string) {
+    console.log(`Constructor called with name=${name}`);
+  }
+}
+
+const personInstance = new Person("Jane");
+```
+
 - How to check that a class is of a certain instance?
+
+The instanceof operator in Java is used to check whether an object is an instance of a particular class or not.
+objectName instanceOf className; Here, if objectName is an instance of className , the operator returns true . Otherwise, it returns false .
+
 - What is `this` in a class?
+
 - What is a class method?
+
 - What is the visibility of properties?
+
 - What is the difference between `public`, `private` and `protected`?
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
