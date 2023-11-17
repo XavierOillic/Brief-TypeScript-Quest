@@ -50,22 +50,24 @@ function getFavoriteNumb(a, b): number {
 
 - What is a class?
 
-It is a Group which have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of Element.
+It is a Group of objects (created with NEW word) which have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of Element.
 
 ```ts
 class MyClass {
-  [s: string]: boolean | ((s: string) => boolean);
+  x : number;
+  y : number;
 
-  check(s: string) {
-    return this[s] as boolean;
+  const MyClass = New MyClass();
+MyClass.x = 0;
+MyClass.y = 0;
   }
-}
 ```
 
 - What is a class constructor?
 
+The constructor is a special method of the class, used to create objects and initialize field value.
 A constructor is a special Function, which can be called only once.
-In TS, Constructor class can include Methods, Properties, and Logics Constructors.
+We create a CLASS (the template)![Alt text](<Capture d’écran 2023-11-17 à 09.42.19.png>)
 
 ```ts
 class Point {
