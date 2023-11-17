@@ -45,13 +45,13 @@ function getFavoriteNumb(a: number, b: number): number {
 }
 ```
 
-**🎉🎉🎉Update the Github Project board🎉🎉🎉**
+**🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
 
 ## Level 2
 
 - What is a class?
 
-It is a Group of objects (created with NEW word) which have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of Element.
+It is a Group of objects (created with NEW word) which have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of Element. It works like a shape.
 
 ```ts
 class MyClass {
@@ -66,8 +66,9 @@ MyClass.y = 0;
 
 - What is a class constructor?
 
-The constructor is a special method of the class, used to create objects and initialize field value.
+The CONSTRUCTOR is a special/particular METHOD of the class, used to create objects and initialize field value.
 A constructor is a special Function, which can be called only once.
+ONE CONSTRUCTOR PER CLASS.
 
 [Alt text](<src/image/Capture d’écran 2023-11-17 à 09.42.19.png>)
 
@@ -106,6 +107,7 @@ const personInstance = new Person("180 cm", "80kg");
 
 The instanceof operator in TS is used to check whether an object is an instance of a particular class or not.
 objectName instanceOf className; Here, if objectName is an instance of className , the operator returns true . Otherwise, it returns false .
+We can use it in a IF condition, it return a booelan Value.
 
 ```ts
 function Car (make, model, year) {
@@ -122,7 +124,11 @@ console.log(auto instanceOf Object); // Expected TRUE
 - What is `this` in a class?
 
 This. refer to the Class Instance, and its properties.
-====>> We cannot use THIS if we don't have create a CONSTRUCTOR ine the Class declaration.
+====>> We cannot use THIS if we don't have create a CONSTRUCTOR in the Class declaration.
+
+Le THIS design T H I S one !
+It act only one Instance.
+Le THIS act also on Method.
 
 ```ts
 class Voiture {
@@ -146,6 +152,9 @@ const caisse = new Voiture("Honda", " NianiNAiNAINIA");
   A method is like a function, in a Class, and it is Bound to this Class.
   We declare a Class Dog, and this dog make noise. This Method (Noise) is bound to the Dog Class.
   And we can call this Method, by using one Instance of the Dog Class.
+
+We cannot call a method on an object which is not instanciated.
+Excepted the Static Class.
 
 ```ts
 class Animal {
@@ -172,34 +181,103 @@ So, we can access outside of the class using an object of the class.
 - What is the difference between `public`, `private` and `protected`?
 
 ===> PUBLIC : access everywhere.
-===> PRIVATE : only allows only inside the class.
-===> PROTECTED : allows access inside the class, and in the derived Class.
+===> PRIVATE : only allows only INSIDE the class, not even with a Child.
+===> PROTECTED : allows access inside the class, and in the derived Class, like a Child.
 
 The PRIVATE ACCESS modifier ensures that the Class members are visible only to that class and are not accessible outside the containing class.
 
 ```ts
 class Employee {
   private code: number;
-  name: string;
+  public: string; // Public par defaut
 }
 let employeeNew = new employee();
 employeeNew.code = 123; //====> COMPILOR ERROR !
 employeeNew.name = "Marc"; //====> OK !
+
+class Emploi extends Employee {
+  // La  class Emploi depend de la class Employee.
+}
 ```
 
-**🎉🎉🎉Update the Github Project board🎉🎉🎉**
+**🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
 
 ## Level 3
 
 - How to split our program into different files? (e.g. a class in a file that I import into another)
+
+When we create a program, and when it becomes too long, we can split it into differents parts, so as to make it easily to read, and maintain.
+In a Program, we can specify what parts of the code we wanted to call in another file.
+Finally, we will have severals files with parts of a same program.
+
 - What is the `export` keyword?
+
+To allow an import from another file, we have to use the Key Word EXPORT at the beginning of the Class and/or Programm.
+
 - What is the `import` keyword?
+
+As soon as we have write the Key word, we can use this one to IMPORT one part.
+
+This example for importing a Function, but we also can import a Class.
+
+```ts
+File1.ts :
+export SomeFunction () {
+  //body of the function
+}
+
+File2.ts :
+import { Somefunction } from "./File1"
+
+someFunction();
+
+//===============================================================
+
+File1.ts :
+const AddTwoNumbers = (a : number, b : number) : number => {
+  return a + b;
+}
+export default AddTwoNumbers;
+
+File2.ts :
+import AddTwoNumbers from "./File1"
+const result = AddTwoNumbers(4, 5);
+
+```
+
 - What's inheritance?
+
+It occurs when a Child Class inherit the properties, methods from a Parent Class.
+To inherit a Class, we use the EXTENDS key word.
+
+```ts
+class Person {
+  cpnstructor(private firstName: string, private lastName: string) {
+    this.firstName = firstname;
+    this.lastName = lastName;
+  }
+  getFullName(): string {
+    return `${this.firstname} ${this.lastName}`;
+  }
+  describe(): string {
+    return `this is $${this.firstname} ${this.lastName}`;
+  }
+}
+
+class Employee extends person {
+  //...
+}
+```
+
 - How to call the constructor of a parent class?
+
 - How to call a method of a parent class?
+
 - What is polymorphism?
 
-**🎉🎉🎉Update the Github Project board🎉🎉🎉**
+**🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
+**🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
+**🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
 
 ## Boss level
 
@@ -268,7 +346,7 @@ Create a loop that makes two instances of subclasses `Hero` fight each other (th
 
 When at least one of them is dead, display `{heroName} wins`. If both are dead, display `It's a draw`.
 
-**🎉🎉🎉Update the Github Project board🎉🎉🎉**
+**🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
 
 ---
 
