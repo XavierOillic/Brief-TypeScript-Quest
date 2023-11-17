@@ -4,13 +4,13 @@ You will have to find the following information and test them as you go along in
 
 ## Level 1
 
-- Which are the different primitive data types in TypeScript?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ Which are the different primitive data types in TypeScript?
 
 We find seven primitives Data Types : string, number, boolean, null, undefined, symbol, bigint.
 the most commonly used are the Three first one : string, boolean, and number.
 We define the variables by using them without Uppercase.
 
-- How to type an Array?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ How to type an Array?
 
 For the Arrays, it depends of what we are going to put in it.
 
@@ -30,12 +30,12 @@ or
 let fruits: Array<string> = ["Apple", "peach"];
 ```
 
-- What is the `any` type?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is the `any` type?
 
 When we declare un variable with no specification, Typescript considers like an "ANY" Type.
 WE CAN USE "ANY", but we have to NEVER DO IT !
 
-- How to type the return of a function as well as the type of its parameters?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ How to type the return of a function as well as the type of its parameters?
 
 We can specify a result of a function by using the two dots and the name of the Type. Just before the first braces.
 
@@ -49,7 +49,7 @@ function getFavoriteNumb(a: number, b: number): number {
 
 ## Level 2
 
-- What is a class?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is a class?
 
 It is a Group of objects (created with NEW word) which have all the same properties. A class is acting like a template, to build a lot of parameters in one shot, for another lot of Element. It works like a shape.
 
@@ -64,7 +64,7 @@ MyClass.y = 0;
   }
 ```
 
-- What is a class constructor?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is a class constructor?
 
 The CONSTRUCTOR is a special/particular METHOD of the class, used to create objects and initialize field value.
 A constructor is a special Function, which can be called only once.
@@ -85,7 +85,7 @@ class Point {
 }
 ```
 
-- What is a class instance?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is a class instance?
 
 It is an Object. Known as Class Object or Class instance.
 While classes are groups of objects, an instance is a specific object that actually belongs to a class.
@@ -103,7 +103,7 @@ class Person {
 const personInstance = new Person("180 cm", "80kg");
 ```
 
-- How to check that a class is of a certain instance?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ How to check that a class is of a certain instance?
 
 The instanceof operator in TS is used to check whether an object is an instance of a particular class or not.
 objectName instanceOf className; Here, if objectName is an instance of className , the operator returns true . Otherwise, it returns false .
@@ -121,7 +121,7 @@ console.log(auto instanceOf Car); //Expected TRUE
 console.log(auto instanceOf Object); // Expected TRUE
 ```
 
-- What is `this` in a class?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is `this` in a class?
 
 This. refer to the Class Instance, and its properties.
 ====>> We cannot use THIS if we don't have create a CONSTRUCTOR in the Class declaration.
@@ -148,10 +148,10 @@ const bagnolle = new Voiture("Toyota", "Coccinelle");
 const caisse = new Voiture("Honda", " NianiNAiNAINIA");
 ```
 
-- What is a class method?
-  A method is like a function, in a Class, and it is Bound to this Class.
-  We declare a Class Dog, and this dog make noise. This Method (Noise) is bound to the Dog Class.
-  And we can call this Method, by using one Instance of the Dog Class.
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is a class method?
+A method is like a function, in a Class, and it is Bound to this Class.
+We declare a Class Dog, and this dog make noise. This Method (Noise) is bound to the Dog Class.
+And we can call this Method, by using one Instance of the Dog Class.
 
 We cannot call a method on an object which is not instanciated.
 Excepted the Static Class.
@@ -173,12 +173,12 @@ const chien = new Animal("Gepetto", "Bouvier Bernois");
 const chat = new Animal("Pignouse", "chat");
 ```
 
-- What is the visibility of properties?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is the visibility of properties?
 
 By default, the visibility of all properties, methods Classes is "Public".
 So, we can access outside of the class using an object of the class.
 
-- What is the difference between `public`, `private` and `protected`?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is the difference between `public`, `private` and `protected`?
 
 ===> PUBLIC : access everywhere.
 ===> PRIVATE : only allows only INSIDE the class, not even with a Child.
@@ -204,17 +204,17 @@ class Emploi extends Employee {
 
 ## Level 3
 
-- How to split our program into different files? (e.g. a class in a file that I import into another)
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ How to split our program into different files? (e.g. a class in a file that I import into another)
 
 When we create a program, and when it becomes too long, we can split it into differents parts, so as to make it easily to read, and maintain.
 In a Program, we can specify what parts of the code we wanted to call in another file.
 Finally, we will have severals files with parts of a same program.
 
-- What is the `export` keyword?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is the `export` keyword?
 
 To allow an import from another file, we have to use the Key Word EXPORT at the beginning of the Class and/or Programm.
 
-- What is the `import` keyword?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is the `import` keyword?
 
 As soon as we have write the Key word, we can use this one to IMPORT one part.
 
@@ -245,7 +245,7 @@ const result = AddTwoNumbers(4, 5);
 
 ```
 
-- What's inheritance?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What's inheritance?
 
 It occurs when a Child Class inherit the properties, methods from a Parent Class.
 To inherit a Class, we use the EXTENDS key word.
@@ -269,11 +269,125 @@ class Employee extends person {
 }
 ```
 
-- How to call the constructor of a parent class?
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ How to call the constructor of a parent class?
 
-- How to call a method of a parent class?
+We use the "SUPER()" method of the constructor Method.
+Using it in the Constructor of the Child Class to access to the Constructor of the Parent Class.
 
-- What is polymorphism?
+```ts
+class Person {
+  constructor(private firstName: string, private lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  getFullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  describe(): string {
+    return `This is ${this.firstName} ${this.lastName}.`;
+  }
+}
+// =======>> To inherit from the Parent Class "Person", we have to use the KEY word EXTENDS at the beginning of the next one; we have also to call the Constructor by using the key Word SUPER().
+//inside the Parenthis, we write the two parameters we want to take into.
+
+class Employee extends Person {
+  constructor(firstName: string, lastName: string, private jobTitle: string) {
+    // call the constructor of the Person class:
+    super(firstName, lastName);
+  }
+}
+```
+
+At least, we can creates only one employee with the parameters of the both class beyond it.
+Because the Employee class inherits properties and methods of the Person class, you can call the getFullName() and describe() methods on the employee object, as follows:
+
+```ts
+let employee = new Employee("John", "Doe", "Web Developer");
+
+console.log(employee.getFullName());
+console.log(employee.describe());
+```
+
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ How to call a method of a parent class?
+
+We have to use the "super. methodInParentClass()" syntax to invoke the methodInParentClass() in the method of the child class.
+
+The class which inherits properties and methods is called the child class. And the class whose properties and methods are inherited is known as the parent class.
+Inheritance allows you to reuse the functionality of an existing class without rewriting it.
+
+```ts
+class Animal {
+  public name;
+  constructor(name) {
+    this.name = name;
+  }
+  move(meters) {
+    alert(this.name + " moved " + meters + "m.");
+  }
+}
+
+class Snake extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  move() {
+    alert("Slithering...");
+    super.move(5);
+  }
+}
+
+class Horse extends Animal {
+  constructor(name) {
+    super(name);
+  }
+  move() {
+    alert(super.name + " is Galloping...");
+    super.move(45);
+  }
+}
+```
+
+🤪🤪🤪🤪🤪🤪🤪🤪 ➠ What is polymorphism?
+
+It is the ability to create a Class that have more than one Form; in others words, Classes have the same
+Methods but differents Implementations.
+When several classes inherit from a parent class, and override the same Functionnality.
+
+```ts
+class Car {
+  Rent(type: string): this {
+    console.log(`${type} has been rented.`);
+    return this;
+  }
+
+  Record(): this {
+    console.log(`Car was rented at ${new Date().toLocaleString()}`);
+    return this;
+  }
+
+  Return(type: string): this {
+    console.log(`${type} has been returned.`);
+    return this;
+  }
+}
+//At first, We create a Class car with 3 methods : Rent, record and return.
+
+class ElectricCar {
+  Charge(): this {
+    console.log(`ElectricCar is charged and ready to be rented`);
+    return this;
+  }
+}
+class GazCar {
+  Refill( : this {
+    consol.log('...is full !');
+    return this;
+  })
+}
+```
+
+Thanks to the "THIS" in the two followers class, next to car, the Electric and gasCar inherit from the First one Car, the three Methods in it : rent, record and return.
+Just by returning THIS at the end of electric et gas.
 
 **🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
 **🎉🎉🎉🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱Update the Github Project board🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🎉🎉🎉**
