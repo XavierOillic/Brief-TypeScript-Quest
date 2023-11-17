@@ -33,14 +33,15 @@ let fruits: Array<string> = ["Apple", "peach"];
 - What is the `any` type?
 
 When we declare un variable with no specification, Typescript considers like an "ANY" Type.
+WE CAN USE "ANY", but we have to NEVER DO IT !
 
 - How to type the return of a function as well as the type of its parameters?
 
-We can specify a result of a function by usinf the two dots and the name of the Type. Just before the first braces.
+We can specify a result of a function by using the two dots and the name of the Type. Just before the first braces.
 
 ```ts
-function getFavoriteNumb(a, b): number {
-  return 26;
+function getFavoriteNumb(a: number, b: number): number {
+  return getFavoriteNumb(23, 90);
 }
 ```
 
@@ -67,7 +68,8 @@ MyClass.y = 0;
 
 The constructor is a special method of the class, used to create objects and initialize field value.
 A constructor is a special Function, which can be called only once.
-We create a CLASS (the template)![Alt text](<Capture d’écran 2023-11-17 à 09.42.19.png>)
+
+[Alt text](<src/image/Capture d’écran 2023-11-17 à 09.42.19.png>)
 
 ```ts
 class Point {
@@ -88,32 +90,102 @@ It is an Object. Known as Class Object or Class instance.
 While classes are groups of objects, an instance is a specific object that actually belongs to a class.
 
 ```ts
-class Person {}
-const personInstance = new Person();
-```
-
-```ts
 class Person {
-  constructor(name: string) {
-    console.log(`Constructor called with name=${name}`);
+  taille: string;
+  poid: string;
+
+  constructor(taille: string, poid: string) {
+    this.taille = taille;
+    this.poid = poid;
   }
 }
-
-const personInstance = new Person("Jane");
+const personInstance = new Person("180 cm", "80kg");
 ```
 
 - How to check that a class is of a certain instance?
 
-The instanceof operator in Java is used to check whether an object is an instance of a particular class or not.
+The instanceof operator in TS is used to check whether an object is an instance of a particular class or not.
 objectName instanceOf className; Here, if objectName is an instance of className , the operator returns true . Otherwise, it returns false .
+
+```ts
+function Car (make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+const Bagnolle = new Car ("WolfWagen","Coccinelle","1960")
+
+console.log(auto instanceOf Car); //Expected TRUE
+console.log(auto instanceOf Object); // Expected TRUE
+```
 
 - What is `this` in a class?
 
+This. refer to the Class Instance, and its properties.
+====>> We cannot use THIS if we don't have create a CONSTRUCTOR ine the Class declaration.
+
+```ts
+class Voiture {
+  marque: string;
+  modele: string;
+
+  constructor(marqueParam: string, modelParam: string) {
+    this.marque = marqueParam;
+    this.model = modelParam;
+  }
+  afficherDetails(): void {
+    console.log(`Marque => ${this.marque}, Modèle => ${this.modele}`);
+  }
+}
+
+const bagnolle = new Voiture("Toyota", "Coccinelle");
+const caisse = new Voiture("Honda", " NianiNAiNAINIA");
+```
+
 - What is a class method?
+  A method is like a function, in a Class, and it is Bound to this Class.
+  We declare a Class Dog, and this dog make noise. This Method (Noise) is bound to the Dog Class.
+  And we can call this Method, by using one Instance of the Dog Class.
+
+```ts
+class Animal {
+  nom: string;
+  race: string;
+
+  constructor(nomParam: string, raceParam: string) {
+    this.nom = nomParam;
+    this.race = raceParam;
+  }
+  faitDuBruit(): void {
+    console.log("...fait sn bruit d'animal.");
+  }
+}
+const chien = new Animal("Gepetto", "Bouvier Bernois");
+const chat = new Animal("Pignouse", "chat");
+```
 
 - What is the visibility of properties?
 
+By default, the visibility of all properties, methods Classes is "Public".
+So, we can access outside of the class using an object of the class.
+
 - What is the difference between `public`, `private` and `protected`?
+
+===> PUBLIC : access everywhere.
+===> PRIVATE : only allows only inside the class.
+===> PROTECTED : allows access inside the class, and in the derived Class.
+
+The PRIVATE ACCESS modifier ensures that the Class members are visible only to that class and are not accessible outside the containing class.
+
+```ts
+class Employee {
+  private code: number;
+  name: string;
+}
+let employeeNew = new employee();
+employeeNew.code = 123; //====> COMPILOR ERROR !
+employeeNew.name = "Marc"; //====> OK !
+```
 
 **🎉🎉🎉Update the Github Project board🎉🎉🎉**
 
