@@ -252,7 +252,7 @@ To inherit a Class, we use the EXTENDS key word.
 
 ```ts
 class Person {
-  cpnstructor(private firstName: string, private lastName: string) {
+  constructor(private firstName: string, private lastName: string) {
     this.firstName = firstname;
     this.lastName = lastName;
   }
@@ -260,7 +260,7 @@ class Person {
     return `${this.firstname} ${this.lastName}`;
   }
   describe(): string {
-    return `this is $${this.firstname} ${this.lastName}`;
+    return `this is ${this.firstname} ${this.lastName}`;
   }
 }
 
