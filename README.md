@@ -428,6 +428,8 @@ Create two instances of `Hero` and check that the `attack` and `isAlive` methods
 
 **Constraint to add**: you now have to make sure that the `name`, `power`, `life` properties are private. You will have to create methods to access their value and modify their value.
 
+
+
 ### Part 2 : Weapons
 
 ​
