@@ -4,29 +4,37 @@ import { HeroSword } from "./HeroSword";
 import { Hero } from "./Hero_class";
 import { randomPower, randomResist } from "./random_const";
 
+const hulk = new HeroSpear("Avengers","Hulk", randomPower(100, 150), randomResist(1000, 1500));
+const thor = new HeroSpear("Avengers","Thor", randomPower(100, 150), randomResist(1000, 1500));
 
-class Game {
-    battle () {
-            while (hero4.isAlive() && hero5.isAlive()) {
-                hero4.attack(hero5);
-                hero5.attack(hero4);
+const legolas = new Hero("Elfe","Legolas", randomPower(10, 120), randomResist(200, 300));
+const groumpft = new HeroAxe("Troll","Groumpft", randomPower(10, 120), randomResist(200, 300));
+
+
+
+// WHILE, TANT que l'un ET l'autre sont toujours en vie, ils peuvent se battre.
+    function battle (fighterOne: Hero, fighterTwo : Hero) {
+            while (fighterOne.isAlive() && fighterTwo.isAlive()) {
+                
+                fighterOne.attack(fighterTwo);
+                fighterTwo.attack(fighterOne);
             }
+            if (fighterOne.isAlive()) {
+                return `${fighterOne.valueName} wins !`;
+            } else if (fighterTwo.isAlive()) {
+                return `${fighterTwo.valueName} wins !`;
+            } else return "It's a draw !"
    }
-}
 
+console.log("-------------------------------------------------------------------------")
 
-/*const hero1 = new Hero("Dwarf","Bâlin", randomResist(1000, 1500), randomPower(200, 300), HeroAxe);
-const hero2 = new Hero("Elfe","Legolas", randomResist(1000, 1200), randomPower(200, 300), HeroSpear);
-const hero3 = new HeroAxe("Troll","Groumpft", randomResist(1000, 1200), randomPower(200, 300));
+console.log(thor);
+console.log(hulk);
 
-const hulk = new Hero("Avengers","hulk", randomResist(1000, 1500), randomPower(20, 30));
-const thor = new Hero("Avengers","Thor", randomResist(1000, 1500), randomPower(20, 30));*/
+console.log("-------------------------------------------------------------------------")
 
-const hero4 = new HeroAxe("Avengers","Hulk", randomPower(100, 150), randomResist(1000, 1500));
-const hero5 = new HeroSpear("Avengers","Thor", randomPower(100, 150), randomResist(1000, 1500));
+const resultFight = battle(hulk, thor);
+console.log(resultFight);
 
-const partie1 = new Game(); // JE CREE UNE INSTANCE DE MA GAME que j'appelle PARTIE 1
-const partie2 = new Game();
+console.log("-------------------------------------------------------------------------")
 
-partie1.battle(); // J'appelle la Partie1."LA METHODE" BATTLE.
-partie2.battle()

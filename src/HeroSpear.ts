@@ -1,20 +1,19 @@
 
 import { HeroAxe } from "./HeroAxe";
+import { HeroSword } from "./HeroSword";
 import { Hero } from "./Hero_class";
-import { Weapon } from "./Weapon_class";
+import { Weapon, Weapon2 } from "./Weapon_class";
 
 export class HeroSpear extends Hero {
-    static paramPower: number;
     constructor (paramBreed : string, paramName : string, paramPower : number, paramResist : number) {
-        super(paramBreed, paramName, paramPower, paramResist, new Weapon("Spear"));
+        super(paramBreed, paramName, paramPower, paramResist);
+        this.weapon2 = new Weapon2("Spear");
         }// FIN DE CONSTRUCTOR    
         
-    attack (opponent : Hero) : void {
-           if (opponent instanceof HeroAxe) {
-                    opponent.paramResist -= HeroAxe.newValuePower *2;
-            } 
-            console.log(`${Hero.name} attack ${opponent.getValueName} and inflict ${this.newValuePower}`);
-             
-        }  // FIN de ATTACK
+     attack(opponent: Hero): void {
+        if (opponent instanceof HeroAxe && opponent instanceof HeroSword){
+            opponent.valueResist -= this.valuePower * 2; // on peut FAIRE UN " -= "
+        } else super.attack(opponent);
+    } // FIN de ATTACK
 } // FIN DE CLASS HEROSPEAR
 
